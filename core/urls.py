@@ -20,3 +20,8 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+from django.contrib import admin
+
+admin.site.site_header = "Biznes Tizim Boshqaruvi"
+admin.site.site_title = "Admin Panel"
+admin.site.index_title = "Kerakli bo'limni tanlang:"
