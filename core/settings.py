@@ -116,3 +116,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+import os
+
+# Static fayllar (Dizayn va CSS) uchun server sozlamalari
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Render serverida static fayllarni avtomatik yig'ishga ruxsat berish
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
